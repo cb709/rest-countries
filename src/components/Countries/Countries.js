@@ -17,14 +17,15 @@ const Countries = () => {
   }
 
   return (
-    <div className="countries-container">
+    <div className="container countries-container">
+      <h1 className="my-4">ALL Countries Here</h1>
       <div className="countries">
-        {countries.slice(0, count).map((country) => (
+        {countries.slice(0, count).map((country, index) => (
           <Country key={country.name.common} data={country}></Country>
         ))}
       </div>
-      <div className="load-more-button">
-        <button onClick={increaseCount}>Load More</button>
+      <div className="load-more-button mt-5">
+        <button className="btn btn-success" onClick={increaseCount}>Load More</button>
       </div>
     </div>
   );
